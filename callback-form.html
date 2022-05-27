@@ -44,6 +44,7 @@
     </section>
     <section class="callback-form__wrapper">
       <form action="https://echo.htmlacademy.ru/" method="get" class="callback-form">
+        <div class="callback-form__dividing-line"></div>
         <fieldset class="callback-form__rating">
           <legend class="rating__title">ВАше Общее впечатление:</legend>
           <ul class="rating__list">
@@ -61,6 +62,7 @@
             </li>
           </ul>
         </fieldset>
+        <div class="callback-form__dividing-line"></div>
         <fieldset class="callback-form__name">
           <legend class="name__title">Представьтесь:</legend>
           <ul class="name__list">
@@ -81,6 +83,7 @@
             </li>
           </ul>
         </fieldset>
+        <div class="callback-form__dividing-line"></div>
         <fieldset class="callback-form__contacts">
           <legend class="contacts__title">Контактная информация:</legend>
           <ul class="contacts__list">
@@ -100,14 +103,32 @@
             </li>
           </ul>
         </fieldset>
+        <div class="callback-form__dividing-line"></div>
         <fieldset class="callback-form__locations">
           <legend class="locations__title">посещенные достопримечательности:</legend>
           <ul class="locations__list">
             <li class="locations__item">
-              <input type="checkbox" name="" id="">
-              <label for=""></label>
+              <input class="locations__checkbox" type="checkbox" name="visitedLocations" id="devilsBridge" value="devilsBridge" checked>
+              <label class="locations__label" for="devilsBridge">Мост Дьявола</label>
+            </li>
+            <li class="locations__item">
+              <input class="locations__checkbox" type="checkbox" name="visitedLocations" id="bellMountain" value="bellMountain" checked>
+              <label class="locations__label" for="bellMountain">Гора-Колокол</label>
+            </li>
+            <li class="locations__item">
+              <input class="locations__checkbox" type="checkbox" name="visitedLocations" id="slidePark" value="slidePark" checked>
+              <label class="locations__label" class="locations__label" for="slidePark">Слайд-парк</label>
+            </li>
+            <li class="locations__item">
+              <input class="locations__checkbox" type="checkbox" name="visitedLocations" id="redRocks" value="redRocks">
+              <label class="locations__label" for="redRocks">Красные скалы</label>
             </li>
           </ul>
+        </fieldset>
+        <div class="callback-form__dividing-line"></div>
+        <fieldset class="callback-form__comment">
+          <legend class="comment__title">Опишите свои эмоции:</legend>
+          <textarea class="comment_input" name="visitComment" id="visitComment" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
         <button class="" type="submit">ОТПРАВИТЬ ОТЗЫВ</button>
       </form>

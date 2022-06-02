@@ -1,0 +1,52 @@
+{
+  "name": "html-academy-p.2-sedona",
+  "description": "Проект второго курса обучения HTML Academy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "^1.0.0",
+    "autoprefixer": "^10.4.7",
+    "browser-sync": "^2.27.10",
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-watch": "^4.0.1",
+    "postcss": "^8.4.14",
+    "stylelint": "^13.13.1",
+    "stylelint-config-htmlacademy": "^0.1.12"
+  },
+  "scripts": {
+    "test": "npm run editorconfig && npm run stylelint",
+    "editorconfig": "stylelint \"sass/**/*.scss\" --syntax scss",
+    "build": "gulp styles",
+    "start": "gulp"
+  },
+  "browserlist": [
+    "last 2 versions",
+    "not dead",
+    "not ie <= 11"
+  ],
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "*.html",
+    "js/**/*.js",
+    "images/**/*.svg",
+    "sass/**/*.scss"
+  ],
+  "engines": {
+    "node": "16.15.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nnikitkit/htmlacademy-part2-sedona.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nnikitkit/htmlacademy-part2-sedona/issues"
+  },
+  "homepage": "https://github.com/Nnikitkit/htmlacademy-part2-sedona#readme"
+}

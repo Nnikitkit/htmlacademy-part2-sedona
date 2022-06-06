@@ -1,9 +1,8 @@
 const gulp = require("gulp");
 const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
-//const sass = require("gulp-sass");
 const sass = require('gulp-sass')(require('sass'));
-const postcss = require("postcss");
+const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
 
@@ -29,7 +28,7 @@ exports.styles = styles;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'HTML Academy p.2 Sedona'
+      baseDir: './'
     },
     cors: true,
     notify: false,

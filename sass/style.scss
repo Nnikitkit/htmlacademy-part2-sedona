@@ -1,1 +1,55 @@
+/* сначала всегда подключение файлов, только потом остальное*/
 @import "normalize.css";
+@import "fonts.css";
+/*@import "global.scss";*/
+
+
+/* базовые переменные - шрифт, основные цвета (остаются в этом файле)*/
+$font-family: 'PT Sans';
+
+$backgound-color-main: hsla(0, 0%, 100%, 1);
+$backgound-color-option: hsla(203, 47%, 66%, 1);
+$backgound-color-option--hover:hsla(203, 42%, 58%, 1);
+$backgound-color-option--active: hsla(202, 44%, 54%, 1);
+$backgound-color-option--disable: hsla(0, 0%, 90%, 1);
+$backgound-color-other-features: hsla(0, 0%, 93%, 1);
+
+$text-color-first: hsla(0, 0%, 100%, 1);
+$text-color-second: hsla(0, 0%, 0%, 1);
+$text-color-second-shade: hsla(0, 0%, 20%, 1);
+
+$text-color-menu--hover: hsla(203, 47%, 66%, 1);
+$text-color-menu--active: hsla(0, 0%, 0%, 0.3);
+$text-color-active-menu: hsla(23, 15%, 40%, 1);
+$text-color-active-menu--hover: hsla(23, 18%, 32%, 1);
+$text-color-active-menu--active:hsla(23, 15%, 40%, 0.3);
+$text-color-button-menu--active: hsla(0, 0%, 100%, 0.3);
+
+$menu-close-button-color: hsla(0, 0%, 100%, 1);
+$menu-close-button-color--hover: hsla(0, 0%, 100%, 0.6);
+$menu-close-button-color--active: hsla(0, 0%, 100%, 0.3);
+$menu-open-button-color: hsla(203, 47%, 66%, 1);
+$menu-open-button-color--hover: hsla(203, 47%, 66%, 0.6);
+$menu-open-button-color--active: hsla(203, 47%, 66%, 0.3);
+
+$background-color-forms: hsla(0, 0%, 95%, 1);
+$background-color-forms--hover: hsla(0, 0%, 90%, 1);
+$background-color-forms--active: hsla(0, 0%, 84%, 1);
+$label-checkbox-radio-color: hsla(0, 0%, 20%, 1);
+$label-checkbox-radio-color--active: hsla(0, 0%, 84%, 1);
+
+$video-background-color:hsla(0, 0%, 40%, 0.6);
+$video-background-mobile-color: hsla(0, 0%, 95%, 1);
+$video-controls-color: hsla(0, 0%, 100%, 1);
+$video-controls-color--hover: hsla(0, 0%, 100%, 0.6);
+$video-controls-color--active: hsla(0, 0%, 100%, 0.3);
+$video-controls-mobile-color: hsla(204, 10%, 40%, 1);
+$video-controls-mobile-color--hover: hsla(0, 0%, 20%, 1);
+$video-controls-mobile-color--active: hsla(0, 0%, 20%, 0.3);
+/*global*/
+.page {
+  height: 100%;
+}
+.page__body {
+  font-family: $fontFamily, sans-serif;
+}

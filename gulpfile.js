@@ -17,7 +17,7 @@ const styles = () => {
       autoprefixer()
     ]))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("css"))
+    .pipe(gulp.dest("css/"))
     .pipe(sync.stream());
 }
 

@@ -2,11 +2,19 @@
 @import "normalize.css";
 @import "fonts.css";
 /*@import "global.scss";*/
-
+/*@import "page-header.scss";*/
+/*@import "page-footer.scss";*/
+/*@import "index-page-main.scss";*/
+/*@import "main-intro.scss";*/
+/*@import "main-features.scss";*/
+/*@import "city-features.scss";*/
+/*@import "other-features.scss";*/
+/*@import "find-hotel.scss";*/
+/*@import "map.scss";*/
 
 /* базовые переменные - шрифт, основные цвета (остаются в этом файле)*/
 $font-family: 'PT Sans';
-
+/* ШРИФТЫ НЕ ДО КОНЦА ПРАВИЛЬНО РАБОТАЮТ*/
 $backgound-color-main: hsla(0, 0%, 100%, 1);
 $backgound-color-option: hsla(203, 47%, 66%, 1);
 $backgound-color-option--hover:hsla(203, 42%, 58%, 1);
@@ -46,10 +54,257 @@ $video-controls-color--active: hsla(0, 0%, 100%, 0.3);
 $video-controls-mobile-color: hsla(204, 10%, 40%, 1);
 $video-controls-mobile-color--hover: hsla(0, 0%, 20%, 1);
 $video-controls-mobile-color--active: hsla(0, 0%, 20%, 0.3);
-/*global*/
+
+/*global.scss*/
 .page {
   height: 100%;
 }
 .page__body {
-  font-family: $fontFamily, sans-serif;
+  font-family: $font-family, sans-serif;
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/*basic-button.scss*/
+.basic-button {
+  display: block;
+  text-decoration: none;
+  color: $text-color-first;
+  background: $menu-open-button-color;
+  text-align: center;
+}
+
+/*page-header.scss*/
+.page-header {
+  text-transform: uppercase;
+}
+.page-navigation__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: $menu-open-button-color;
+}
+.page-navigation__item {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.page-navigation__item .basic-button {
+  width: 100%;
+  min-height: 55px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 40px;
+}
+.page-navigation__item:not(:last-child) .basic-button {
+  box-shadow:
+  0px 1px 0px rgba(1, 1, 1, 0.2),
+  inset 0px 1px 0px rgba(255, 255, 255, 0.2);
+  margin-bottom: 1px;
+}
+.page-navigation__item:last-child .basic-button {
+  box-shadow:
+  inset 0px 1px 0px rgba(255, 255, 255, 0.2),
+  inset 0px -7px 7px 0px rgba(0, 0, 0, 0.2);
+}
+.page-navigation__logo {
+  display: block;
+  width: 100%;
+  height: 56px;
+  background-color: $backgound-color-main;
+}
+/*page-footer.scss*/
+.page-footer {
+  background-color: $backgound-color-main;
+}
+.page-footer__hashtag {
+  color: $text-color-second;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+}
+.page-footer__social-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.social-links__wrapper {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.social-links__wrapper .basic-button {
+  width: 46px;
+  height: 48px;
+}
+.developer__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  color: $text-color-second;
+}
+
+/*index-page-main.scss*/
+.index-page-main {
+  text-transform: uppercase;
+}
+/*main-intro.scss*/
+.main-intro__text-with-background-picture {
+  display: block;
+  height: 389px;
+  background-image: url(/images/content/back-mobile.jpg.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  padding-top: 90px;
+  padding-bottom: 85px;
+}
+.main-intro__text {
+  text-align: center;
+}
+.main-intro__text--bold {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: $text-color-second;
+}
+.main-intro__text--thin {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  color: $text-color-second-shade;
+}
+
+/*main-features.scss*/
+.main-features__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.main-features__item {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.main-features__text {
+  background-color: $backgound-color-option;
+  color: $text-color-first;
+  text-align: center;
+}
+.main-features__text--bold {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+}
+.main-features__text--number-separator {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+.main-features__text--thin {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+/*city-features.scss*/
+.city-features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: $backgound-color-main;
+}
+.city-features__item {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.city-features__text {
+  text-align: center;
+}
+.city-features__text--bold {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: $text-color-second;
+}
+.city-features__text--thin {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: $text-color-second-shade;
+}
+
+/*other-features.scss*/
+.other-features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: $backgound-color-other-features;
+}
+.other-features__item {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.other-features__item:not(:last-child) {
+  box-shadow: inset 0px -1px 0px 0px #D6D6D6;
+}
+.other-features__text {
+  text-align: center;
+}
+.other-features__text--bold {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: $text-color-second;
+}
+.other-features__text--number-separator {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: $text-color-second-shade;
+}
+.other-features__text--thin {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: $text-color-second-shade;
+}
+
+/*find-hotel.scss*/
+.find-hotel {
+  background-color: $backgound-color-main;
+}
+.find-hotel__text {
+  text-align: center;
+}
+.find-hotel__text--bold {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: $text-color-second;
+}
+.find-hotel__text--thin {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  color: $text-color-second-shade;
+}
+.find-hotel__link .basic-button {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+/*map.scss*/
+/* ЗАПОЛНЮ НА ОФОРМЛЕНИИ*/

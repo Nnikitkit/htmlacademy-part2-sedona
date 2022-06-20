@@ -2,8 +2,12 @@
 @import "normalize.css";
 @import "fonts.css";
 /*@import "global.scss";*/
+/*@import "basic-button.scss";*/
 /*@import "page-header.scss";*/
 /*@import "page-footer.scss";*/
+
+/* MAIN PAGE */
+
 /*@import "index-page-main.scss";*/
 /*@import "main-intro.scss";*/
 /*@import "main-features.scss";*/
@@ -11,6 +15,14 @@
 /*@import "other-features.scss";*/
 /*@import "find-hotel.scss";*/
 /*@import "map.scss";*/
+
+/* CALLBACK FORM PAGE */
+
+/*@import "callback-intro.scss";*/
+/*@import "callback-form.scss";*/
+
+/* PHOTO VIDEO PAGE */
+
 
 /* базовые переменные - шрифт, основные цвета (остаются в этом файле)*/
 $font-family: 'PT Sans';
@@ -129,6 +141,7 @@ $video-controls-mobile-color--active: hsla(0, 0%, 20%, 0.3);
 }
 .page-footer__hashtag {
   color: $text-color-second;
+  text-transform: uppercase;
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
@@ -308,3 +321,169 @@ $video-controls-mobile-color--active: hsla(0, 0%, 20%, 0.3);
 
 /*map.scss*/
 /* ЗАПОЛНЮ НА ОФОРМЛЕНИИ*/
+
+/* CALLBACK FORM PAGE */
+
+/*callback-intro.scss*/
+.callback-intro__text-with-background-picture {
+  background-image: url(/images/content/back-desktop.jpg.jpg);
+  background-color: green;
+}
+.callback-intro__text {
+  text-transform: uppercase;
+  background-color: $backgound-color-main;
+  text-align: center;
+}
+.callback-intro__text--bold {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: $text-color-second;
+}
+.callback-intro__text--thin {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: $text-color-second-shade;
+}
+
+/*callback-form.scss*/
+.callback-form__wrapper {
+  background-color: $backgound-color-main;
+  text-align: center;
+}
+/* НЕ РАБОТАЕТ, ЗАМЕНИТЬ НА ОБЕРТКУ И ТЕНЬ?*/
+.callback-form__dividing-line {
+ height: 1px;
+ width: 100%;
+ background-color: hsba(0, 0%, 90%, 1);
+}
+.callback-form__rating,
+.callback-form__name,
+.callback-form__contacts,
+.callback-form__locations,
+.callback-form__comment {
+  border: none;
+}
+.rating__title,
+.name__title,
+.contacts__title,
+.locations__title,
+.comment__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: $text-color-second;
+  text-transform: uppercase;
+  border: none;
+}
+.name__label,
+.contacts__label {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  color: $text-color-second-shade;
+  text-transform: uppercase;
+}
+.rating__label,
+.name__input,
+.contacts__input,
+.locations__label,
+.comment_input {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: $text-color-second;
+}
+.rating__list,
+.rating__item,
+.name__list,
+.name__item,
+.contacts__list,
+.contacts__item,
+.locations__list,
+.locations__item {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.name__input::placeholder,
+.contacts__input::placeholder,
+.comment_input::placeholder {
+ color: $text-color-second;
+}
+.callback-form .basic-button {
+  border: none;
+}
+
+/* PHOTO VIDEO PAGE */
+
+/*photo-video-intro.scss*/
+.photo-video-intro__text-with-background-picture {
+  background-image: url(/images/content/back-desktop.jpg.jpg);
+  background-color: green;
+}
+.photo-video-intro__text {
+  text-transform: uppercase;
+  background-color: $backgound-color-main;
+  text-align: center;
+}
+.photo-video-intro__text--bold {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: $text-color-second;
+}
+.photo-video-intro__text--thin {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: $text-color-second-shade;
+}
+
+/*photo-video-main__photo.scss*/
+
+.photo-video-main__photo {
+  background-color: $backgound-color-main;
+}
+.card-photo-text__discription {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: $text-color-second;
+}
+.card-photo-text__author {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: $text-color-second-shade;
+}
+.likes-container__counter {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: $text-color-second;
+}
+
+/*photo-video-main__video.scss*/
+
+.photo-video-main__video {
+  background-color: $backgound-color-main;
+}
+.video__text {
+  text-transform: uppercase;
+  text-align: center;
+}
+.video__text--bold {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: $text-color-second;
+}
+.video__text--thin {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: $text-color-second-shade;
+}

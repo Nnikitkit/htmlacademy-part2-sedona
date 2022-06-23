@@ -1,6 +1,8 @@
 /* сначала всегда подключение файлов, только потом остальное*/
-@import "normalize.css";
-@import "fonts.css";
+@import "/sass/global/normalize.css";
+@import "/sass/global/fonts.css";
+/* НЕ РАБОТАЕТ ПОДКЛЮЧЕНИЕ ФАЙЛОВ SCSS */
+/*@import "/sass/global/variables.scss";*/
 /*@import "global.scss";*/
 /*@import "basic-button.scss";*/
 /*@import "page-header.scss";*/
@@ -24,9 +26,14 @@
 /* PHOTO VIDEO PAGE */
 
 
-/* базовые переменные - шрифт, основные цвета (остаются в этом файле)*/
+/*variables.scss*/
+
 $font-family: 'PT Sans';
-/* ШРИФТЫ НЕ ДО КОНЦА ПРАВИЛЬНО РАБОТАЮТ*/
+
+$mobile-only-width: 767px;
+$tablet-width: 768px;
+$desctop-width: 1200px;
+
 $backgound-color-main: hsla(0, 0%, 100%, 1);
 $backgound-color-option: hsla(203, 47%, 66%, 1);
 $backgound-color-option--hover:hsla(203, 42%, 58%, 1);
@@ -73,6 +80,9 @@ $video-controls-mobile-color--active: hsla(0, 0%, 20%, 0.3);
 }
 .page__body {
   font-family: $font-family, sans-serif;
+  width: 320px;
+  margin: 0 auto;
+  display: grid;
 }
 .visually-hidden {
   position: absolute;
@@ -105,11 +115,24 @@ $video-controls-mobile-color--active: hsla(0, 0%, 20%, 0.3);
   margin: 0;
   padding: 0;
   background: $menu-open-button-color;
+  display: flex;
+  flex-direction: column;
 }
 .page-navigation__item {
   list-style: none;
   margin: 0;
   padding: 0;
+  text-align: center;
+}
+.page-navigation__item.logo{
+  order: 2;
+  z-index: 1;
+}
+.page-navigation__logo {
+  display: block;
+  width: 100%;
+  height: 55px;
+  background-color: $backgound-color-main;
 }
 .page-navigation__item .basic-button {
   width: 100%;
@@ -129,15 +152,15 @@ $video-controls-mobile-color--active: hsla(0, 0%, 20%, 0.3);
   inset 0px 1px 0px rgba(255, 255, 255, 0.2),
   inset 0px -7px 7px 0px rgba(0, 0, 0, 0.2);
 }
-.page-navigation__logo {
-  display: block;
-  width: 100%;
-  height: 56px;
-  background-color: $backgound-color-main;
-}
 /*page-footer.scss*/
 .page-footer {
   background-color: $backgound-color-main;
+  min-height: 233px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 20px;
 }
 .page-footer__hashtag {
   color: $text-color-second;
@@ -145,26 +168,37 @@ $video-controls-mobile-color--active: hsla(0, 0%, 20%, 0.3);
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
+  margin: 0;
 }
 .page-footer__social-links {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  gap: 6px;
 }
 .social-links__wrapper {
   list-style: none;
   margin: 0;
   padding: 0;
+  text-align: center;
+  vertical-align: middle;
 }
 .social-links__wrapper .basic-button {
   width: 46px;
   height: 48px;
+}
+.page-footer__developer {
+  display: flex;
+  gap: 15px;
 }
 .developer__text {
   font-weight: 400;
   font-size: 14px;
   line-height: 26px;
   color: $text-color-second;
+  text-transform: uppercase;
+  margin: 0;
 }
 
 /*index-page-main.scss*/
@@ -172,6 +206,10 @@ $video-controls-mobile-color--active: hsla(0, 0%, 20%, 0.3);
   text-transform: uppercase;
 }
 /*main-intro.scss*/
+.main-intro {
+  display: flex;
+  flex-direction: column;
+}
 .main-intro__text-with-background-picture {
   display: block;
   height: 389px;
@@ -189,12 +227,14 @@ $video-controls-mobile-color--active: hsla(0, 0%, 20%, 0.3);
   font-size: 18px;
   line-height: 26px;
   color: $text-color-second;
+  margin: 0;
 }
 .main-intro__text--thin {
   font-weight: 400;
   font-size: 14px;
   line-height: 26px;
   color: $text-color-second-shade;
+  margin: 0;
 }
 
 /*main-features.scss*/
@@ -202,6 +242,7 @@ $video-controls-mobile-color--active: hsla(0, 0%, 20%, 0.3);
   list-style: none;
   margin: 0;
   padding: 0;
+  display: grid;
 }
 .main-features__item {
   list-style: none;
@@ -217,16 +258,19 @@ $video-controls-mobile-color--active: hsla(0, 0%, 20%, 0.3);
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+  margin: 0;
 }
 .main-features__text--number-separator {
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
+  margin: 0;
 }
 .main-features__text--thin {
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
+  margin: 0;
 }
 
 /*city-features.scss*/
@@ -240,21 +284,27 @@ $video-controls-mobile-color--active: hsla(0, 0%, 20%, 0.3);
   list-style: none;
   margin: 0;
   padding: 0;
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  column-gap: 10px;
+  row-gap: 15px;
+  /* МЕЖДУ РЯДАМИ НЕ РАБОТАЕТ ОТСТУП*/
+  padding: 0 20px;
 }
-.city-features__text {
-  text-align: center;
-}
+
 .city-features__text--bold {
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   color: $text-color-second;
+  margin: 0;
 }
 .city-features__text--thin {
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
   color: $text-color-second-shade;
+  margin: 0;
 }
 
 /*other-features.scss*/
@@ -280,23 +330,28 @@ $video-controls-mobile-color--active: hsla(0, 0%, 20%, 0.3);
   font-size: 18px;
   line-height: 26px;
   color: $text-color-second;
+  margin: 0;
 }
 .other-features__text--number-separator {
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
   color: $text-color-second-shade;
+  margin: 0;
 }
 .other-features__text--thin {
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
   color: $text-color-second-shade;
+  margin: 0;
 }
 
 /*find-hotel.scss*/
 .find-hotel {
   background-color: $backgound-color-main;
+  display: flex;
+  flex-direction: column;
 }
 .find-hotel__text {
   text-align: center;
@@ -306,12 +361,14 @@ $video-controls-mobile-color--active: hsla(0, 0%, 20%, 0.3);
   font-size: 18px;
   line-height: 26px;
   color: $text-color-second;
+  margin: 0;
 }
 .find-hotel__text--thin {
   font-weight: 400;
   font-size: 14px;
   line-height: 26px;
   color: $text-color-second-shade;
+  margin: 0;
 }
 .find-hotel__link .basic-button {
   font-weight: 700;
